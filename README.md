@@ -2,14 +2,14 @@
 
 
 <div align ="center">
- <img  src="https://github.com/Celsohsl/Challenge-Front-end-Portfolio/blob/main/assets/images/readme-img/banner-topo.jpg" />
+ <img  src="" />
 </div> 
 
 <h2 align ="center">Screenshot</h2>
 
 
 <div align ="center">
- <img src="https://github.com/Celsohsl/Challenge-Front-end-AluraGeek/blob/main/assets/images/readme-img/AluraGeekReadme_home.png" />
+ <img src="" />
 </div>
  
  
@@ -36,7 +36,7 @@ A empresa AluraGeek está precisando trazer mais clientes e aumentar suas vendas
 
 #
 <div align="center">
-  <img src="https://github.com/Celsohsl/Challenge-Front-end-AluraGeek/blob/main/assets/images/readme-img/badge_alurageek300x300.png"/>
+  <img src=""/>
   <h2 align="center">Badge conquistada com esse projeto.</h2>
 </div
  
@@ -50,9 +50,9 @@ A empresa AluraGeek está precisando trazer mais clientes e aumentar suas vendas
 
 <p align="left">
   💻<strong> Skills:</strong>  
- <img align="center" alt="Celso-HTML" src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white">
- <img align="center" alt="Celso-CSS"  src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white">
- <img align="center" alt="Celso-Js" src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">
+ <img align="center" alt="HTML" src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white">
+ <img align="center" alt="CSS"  src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white">
+ <img align="center" alt="Js" src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">
 </p>
 
 <p align="left">
@@ -66,5 +66,5 @@ A empresa AluraGeek está precisando trazer mais clientes e aumentar suas vendas
 
 #
 <p align="left">
-  <a href="https://www.linkedin.com/in/celso-henrique-da-silva-lacerda-front-end/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a> 
+  <a href="https://www.linkedin.com/in/vinicius-souza-santos-308654255/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a> 
 </p>
