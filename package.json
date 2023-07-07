@@ -1,0 +1,16 @@
+{
+  "name": "live-coding-alurageek",
+  "version": "1.0.0",
+  "description": "<h1 align =\"center\">Challenge Front-end AluraGeek, Oracle ONE + Alura.</h1>",
+  "main": "index.js",
+  "scripts": {
+    "server": "json-server --watch db.json",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "vinicius",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

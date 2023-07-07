@@ -1,0 +1,98 @@
+{
+  "starWars": [
+    {
+      "image": "../assets/images/canecasw.png",
+      "alt": "caneca branca do filme star wars",
+      "description": "Caneca ",
+      "price": "R$ 55,00"
+    },
+    {
+      "image": "../assets/images/legosw.png",
+      "alt": "lego preto do darth vader star wars",
+      "description": "Lego ",
+      "price": "R$ 500,00"
+    },
+    {
+      "image": "../assets/images/yoda.png",
+      "alt": "boneco yoda do filme star wars",
+      "description": "Mestre Yoda",
+      "price": "R$ 100,00"
+    },
+    {
+      "image": "../assets/images/stormtropper.png",
+      "alt": "stormtropper do filme star wars",
+      "description": "Stormtrooper",
+      "price": "R$ 120,00"
+    },
+    {
+      "image": "../assets/images/babyyoda.png",
+      "alt": "baby yoda do filme star wars",
+      "description": "Boneco Baby Yoda",
+      "price": "R$ 200,00"
+    },
+    {
+      "image": "../assets/images/mandalorian.png",
+      "alt": "Kylo Ren do filme star wars",
+      "description": "Kylo Ren",
+      "price": "R$ 70,00"
+    }
+  ],
+  "consoles": [
+    {
+      "image": "../assets/images/jsxbox.png",
+      "alt": "controle branco do xbox",
+      "description": "Controle Xbox One",
+      "price": "R$ 300,00"
+    },
+    {
+      "image": "../assets/images/ps5.png",
+      "alt": "controle e console do ps5",
+      "description": "Console Ps5",
+      "price": "R$ 4,000"
+    },
+    {
+      "image": "../assets/images/snes.png",
+      "alt": "console cinza do nintendo nes",
+      "description": "Console Nintendo NES-001",
+      "price": "R$ 2,000"
+    },
+    {
+      "image": "../assets/images/switch.png",
+      "alt": "controle nintendo switch vermelho e azul claro",
+      "description": "Controle Nintendo JoyCon",
+      "price": "R$ 340,00"
+    },
+    {
+      "image": "../assets/images/console.png",
+      "alt": "console preto",
+      "description": "Console Xbox One X",
+      "price": "R$ 3,800"
+    },
+    {
+      "image": "../assets/images/gba.png",
+      "alt": "game boy color tranparente com 3 jogos",
+      "description": "Game Boy Color",
+      "price": "R$ 310,00"
+    }
+  ],
+  "diversos": [
+    {
+      "image": "../assets/images/atari.png",
+      "alt": "camiseta atari com logo vermelho e escrita em preto",
+      "description": "Camiseta Atari",
+      "price": "R$ 80,00"
+    },
+    {
+      "image": "../assets/images/camisasnes.png",
+      "alt": "camiseta cinza com desenho do SNES",
+      "description": "Camiseta NES",
+      "price": "R$ 90,00"
+    },
+    {
+      "image": "../assets/images/sonic.png",
+      "alt": "camiseta cinza com desenho do SNES",
+      "description": "Camiseta NES",
+      "price": "R$ 90,00"
+    }
+  ]
+}
