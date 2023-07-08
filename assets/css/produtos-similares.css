@@ -14,34 +14,124 @@
   width: 560px;
 }
 
-.detalhes :first-child {
+.detalhes:first-child {
   font-size: 3.25em;
   font-weight: 500;
 }
 
+.produto-detalhes img {
+  max-width: 100%;
+  width: 400px;
+  height: 300px;
+  display: block;
+  margin-bottom: 1rem;
+}
+
 .detalhes .produto__preco {
-  margin: 0.5rem 0;
+  font-size: 1.5em; 
 }
 
 .detalhes__descricao {
-  font-weight: 400;
+  font-weight: 500;
+  font-size: 2em; /* Defina o tamanho desejado para o título */
+}
+
+.detalhes .produto__titulo {
+  font-size: 3em; /* Defina o tamanho desejado para o título */
 }
 
 /* Todos os produtos
 ========================================================================== */
-.produtos__titulo button {
-  width: 164px;
+.todos-produtos {
+  display: flex;
+  flex-direction: column;
 }
 
-.produtos__titulo a{
-  margin-bottom: 0;
+.produtos__titulo:first-child {
+  margin-top: 4rem;
 }
 
-.produto__codigo {
+.produtos__titulo {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 6.5rem 1rem;
+}
+
+.produtos__titulo p {
+  font-size: 2rem;
+}
+
+.produtos__link p {
+  color: var(--texto-azul);
+  font-size: 1rem;
+}
+
+.produtos__link img {
+  margin-left: 0.75rem;
+}
+
+.produtos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:space-between;
+  padding: 0 6.5rem 4rem;
+}
+
+.produto__info p {
+  margin-bottom: 0.5rem;
+  position: relative;
+  
+}
+
+.produto__descricao {
+  font-size: 0.875rem;
   font-weight: 500;
-  margin-bottom: 0;
+  margin: 0.5rem 0;
 }
 
+.produto__link {
+  color: var(--texto-azul);
+  font-weight: bold;
+}
+
+.produto__info {
+  position: relative;
+  margin: 10px 13px 13px 10px;
+}
+
+.produto__icons {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.produto__icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  margin-right: 5px;
+  text-decoration: none;
+}
+
+.produto__icons a img {
+  width: 100%;
+  height: 100%;
+}
+
+.produto__icons a:hover {
+  background-color: #ff0000; /* Altere a cor de destaque ao passar o mouse aqui */
+  color: #fff; /* Altere a cor do ícone ao passar o mouse aqui */
+}
+
+.produto__info img {
+  width: 260px;
+  height: 230px;
+}
 
 /* Media Queries Devices
    ========================================================================== */

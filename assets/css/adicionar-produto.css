@@ -81,8 +81,15 @@
   border: 1px solid var(--texto-azul);
   color: var(--texto-azul);
   width: 239px;
+  padding: 8px 12px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center; /* Centraliza o texto no botão */
 }
 
+#imagem {
+  display: none; /* Oculta o input de arquivo original */
+}
 /* Media Queries Devices
    ========================================================================== */
 

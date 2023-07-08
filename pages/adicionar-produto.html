@@ -9,6 +9,43 @@
   <link rel="stylesheet" href="../assets/css/base.css">
   <link rel="stylesheet" href="../assets/css/body.css">
 </head>
+<script>
+  const form = document.querySelector('.form-admin');
+  const adicionarBotao = document.querySelector('[data-adicionar-botao]');
+
+  adicionarBotao.addEventListener('click', function (event) {
+    event.preventDefault();
+
+    const produto = document.getElementById('produto').value;
+    const preco = document.getElementById('preco').value;
+    const categoria = document.getElementById('categoria').value;
+    const descricao = document.getElementById('descricao').value;
+    const imagemInput = document.getElementById('imagem');
+    const imagem = imagemInput.files[0];
+
+    const formData = new FormData();
+    formData.append('produto', produto);
+    formData.append('preco', preco);
+    formData.append('categoria', categoria);
+    formData.append('descricao', descricao);
+    formData.append('imagem', imagem);
+
+    fetch('http://localhost:3000/adicionar-produto', {
+      method: 'POST',
+      body: formData
+    })
+      .then(response => {
+        if (response.ok) {
+          console.log('Produto adicionado com sucesso!');
+        } else {
+          console.error('Erro ao adicionar produto:', response.status);
+        }
+      })
+      .catch(error => {
+        console.error('Erro ao adicionar produto:', error);
+      });
+  });
+</script>
 <body>
   <!-- Nav Search Login -->
   <header>
@@ -34,7 +71,10 @@
           <p>Arraste para adicionar uma imagem para o produto</p>
         </div>
         <p>ou</p>
-        <button class="btn__imagem">Procure no seu computador</button>
+        <label for="imagem" class="btn__imagem">Procure no seu computador</label>
+        <input type="file" name="imagem" id="imagem" accept="image/*">
+
+
       </div>
       <input type="text" name="produto" id="produto" class="input-nome" placeholder="Nome do produto">
       <input type="text" name="preco" id="preco" class="input-nome" placeholder="Preço do produto">
@@ -83,4 +123,5 @@
   </footer>
   <script src="../js/novoProdutoImage.js"></script>
   <script src="../js/adicionarProduto.js"></script>
+
  

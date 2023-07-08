@@ -117,6 +117,7 @@ button {
   font-size: 1rem;
   font-weight: 400;
   height: 51px;
+  width: 200px;
 }
 
 .login button {
@@ -213,6 +214,7 @@ button {
 
 .produto__info {
   position: relative;
+  margin: 10px 13px 13px 10px;
 }
 
 .produto__icons {
@@ -243,6 +245,10 @@ button {
   color: #fff; /* Altere a cor do ícone ao passar o mouse aqui */
 }
 
+.produto__info img {
+  width: 260px;
+  height: 230px;
+}
 
 
 

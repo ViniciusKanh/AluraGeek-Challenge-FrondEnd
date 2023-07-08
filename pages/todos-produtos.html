@@ -11,6 +11,9 @@
   <link rel="stylesheet" href="../assets/css/body.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-PfbpFO3T3x7RZi+W1jR1IzV3fMS2+CYp+VBdINyU3WnqYzq5XnmGn2UJpNzjbV3vWkgDhyccS2jT72e3eF4cMg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="../node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
 
 </head>
@@ -33,23 +36,16 @@
     </nav>
   </header>
   <main>
-   <!-- Todos os Produtos -->
-   <section class="todos-produtos">
-    <div class="produtos__titulo">
-      <p>Todos os produtos</p>
-      <a href="adicionar-produto.html"><button>Adicionar produto</button></a>
-    </div>
-    <section class="produtos" id="starWarsProducts">
+    <!-- Todos os Produtos -->
+    <section class="todos-produtos">
+      <div class="produtos__titulo">
+        <p>Todos os produtos</p>
+        <a href="adicionar-produto.html"><button>Adicionar produto</button></a>
+      </div>
+      <section id="productsSection" class="produtos">
+        <!-- Os produtos serão inseridos aqui -->
+      </section>
     </section>
-
-    <!-- Produtos Consoles -->
-    <section class="produtos" id="consolesProducts">
-    </section>
-
-    <!-- Outros Produtos -->
-    <section class="produtos" id="diversosProducts">
-    </section>
-  </section>
   </main>
   <!-- Contato -->
   <section class="contato">
@@ -83,10 +79,9 @@
     <p>Desenvolvido por Vinicius Santos</p>
     <span>&copy; 2022</span>
   </footer>
-  <script src="../js/login.js"></script>
-  <script src="../js/contatoForm.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.8/dist/sweetalert2.all.min.js"></script>
   <script src="../js/listarprodutos.js"></script>
+  <script src="../js/produtosSimilares.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
 </body>
 
 </html>

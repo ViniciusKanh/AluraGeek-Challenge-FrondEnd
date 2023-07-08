@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AluraGeek-Produtos Similares</title>
+    <link rel="shortcut icon" href="./assets/images/commerce.png" type="image/x-icon">
+    <link rel="stylesheet" href="../assets/css/base.css">
+    <link rel="stylesheet" href="../assets/css/body.css">
+    <link rel="stylesheet" href="../assets/css/produtos-similares.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-PfbpFO3T3x7RZi+W1jR1IzV3fMS2+CYp+VBdINyU3WnqYzq5XnmGn2UJpNzjbV3vWkgDhyccS2jT72e3eF4cMg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="../node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+  <!-- Nav Search Login -->
+  <header>
+    <nav class="busca">
+      <div class="busca__logo">
+        <img src="../assets/images/logo.png" alt="logo azul controle de video game">
+        <a href="../index.html"><p class="busca__texto">Alura</p><p>Geek</p></a>
+        <input type="text" class="busca__barra" placeholder="O que deseja encontrar?">
+      </div>
+      <div class="login">
+        <button data-login-button>Login</button>
+      </div>
+    </nav>
+  </header>
+  
+  <!-- Login Adiministrador  -->
+  <section class="login-admin">
+    <div class="form-admin">
+      <p>Editar Produto</p>
+      <div class="imagem-area">
+        <div class="imagem">
+          <img src="" id="picture">
+          <p>Arraste para adicionar uma imagem para o produto</p>
+        </div>
+        <p>ou</p>
+        <label for="imagem" class="btn__imagem">Procure no seu computador</label>
+        <input type="file" name="imagem" id="imagem" accept="image/*">
+
+
+      </div>
+      <input type="text" name="produto" id="produto" class="input-nome" placeholder="Nome do produto">
+      <input type="text" name="preco" id="preco" class="input-nome" placeholder="Preço do produto">
+      <select name="categoria" id="categoria" class="input-nome">
+        <option value="" disabled selected>Escolha a categoria</option>
+        <option value="starwars">Star Wars</option>
+        <option value="consoles">Consoles</option>
+        <option value="diversos">Diversos</option>
+      </select>
+      <textarea name="descricao" id="descricao" cols="30" rows="10" placeholder="Descrição do produto"></textarea>
+      <button data-adicionar-botao>Salvar Informaçoes do Produto</button>
+    </div>
+  </section>
+
+  <!-- Contato -->
+  <section class="contato">
+    <div class="contato-destaque">
+      <div class="contato__logo">
+        <img src="../assets/images/logo.png" alt="logo azul controle de video game">
+        <p class="contato__texto">Alura</p>
+        <p>Geek</p>
+      </div>
+      <div class="contato__links">
+        <a href="#">Quem somos nós</a>
+        <a href="#">Política de Privacidade</a>
+        <a href="#">Programa fidelidade</a>
+        <a href="#">Nossas lojas</a>
+        <a href="#">Quero ser franqueado</a>
+        <a href="E">Anuncie aqui</a>
+      </div>
+    </div>
+    <div class="form">
+      <p>Fale conosco</p>
+      <form action="" class="contato-form" name="form">
+        <input type="text" name="nome" id="nome" class="input-nome" placeholder="Nome">
+        <textarea name="mensagem" id="msg" cols="30" rows="10" placeholder="Escreva sua mensagem"></textarea>
+        <button type="submit">Enviar mensagem</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Rodapé -->
+  <footer>
+    <p>Desenvolvido por Vinicius Santos</p>
+    <span>&copy; 2022</span>
+  </footer>
+  <script src="../js/novoProdutoImage.js"></script>
+  <script src="../js/editarProduto.js"></script>
+
+ 

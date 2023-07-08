@@ -1,63 +1,95 @@
-document.addEventListener('DOMContentLoaded', function() {
-  fetch('../data/db.json')
-    .then(response => response.json())
-    .then(data => {
-      const starWarsSection = document.getElementById('starWarsProducts');
-      const starWarsProducts = data.starWars;
-      replaceProducts(starWarsSection, starWarsProducts);
+function exibirProdutos(produtos) {
+  // Montar o HTML com os produtos
+  let html = '';
 
-      const consolesSection = document.getElementById('consolesProducts');
-      const consolesProducts = data.consoles;
-      replaceProducts(consolesSection, consolesProducts);
+  produtos.forEach(produto => {
+    const imagemUrl = `../assets/Imagens-salvas/${produto.image}`;
+    html += `
+    <div class="produto__info">
+      <img src="${imagemUrl}" alt="${produto.description}">
+      <p class="produto__descricao">${produto.produto}</p>
+      <p class="produto__preco">R$ ${produto.price.toFixed(2)}</p>
+      <p class="produto__codigo">#${produto.id}</p>
+      <div class="produto__icons">
+        <a href="#"><i class="fas fa-pencil-alt"></i></a>
+        <a href="#"><i class="fas fa-trash"></i></a>
+      </div>
+      <a href="../pages/produtos-similares.html?id=${produto.id}" class="produto__link">Ver produto</a>
+    </div>
+  `;
+  });
 
-      const diversosSection = document.getElementById('diversosProducts');
-      const diversosProducts = data.diversos;
-      replaceProducts(diversosSection, diversosProducts);
-    })
-    .catch(error => console.error(error));
+  // Adicionar o HTML ao elemento desejado
+  const productsSection = document.getElementById('productsSection');
+  productsSection.innerHTML = html;
+}
 
-  function replaceProducts(section, products) {
-    section.innerHTML = '';
+document.addEventListener('DOMContentLoaded', () => {
+  const categorias = ['starwars', 'consoles', 'diversos'];
 
-    products.forEach(product => {
-      const productInfo = document.createElement('div');
-      productInfo.classList.add('produto__info');
-
-      const image = document.createElement('img');
-      image.src = product.image;
-      image.alt = product.alt;
-      productInfo.appendChild(image);
-
-      const description = document.createElement('p');
-      description.classList.add('produto__descricao');
-      description.textContent = product.description;
-      productInfo.appendChild(description);
-
-      const price = document.createElement('p');
-      price.classList.add('produto__preco');
-      price.textContent = product.price;
-      productInfo.appendChild(price);
-
-      const iconsContainer = document.createElement('div');
-      iconsContainer.classList.add('produto__icons');
-
-      const editIconLink = document.createElement('a');
-      editIconLink.href = '#';
-      const editIcon = document.createElement('i');
-      editIcon.classList.add('fas', 'fa-pencil-alt');
-      editIconLink.appendChild(editIcon);
-      iconsContainer.appendChild(editIconLink);
-      
-      const deleteIconLink = document.createElement('a');
-      deleteIconLink.href = '#';
-      const deleteIcon = document.createElement('i');
-      deleteIcon.classList.add('fas', 'fa-trash');
-      deleteIconLink.appendChild(deleteIcon);
-      iconsContainer.appendChild(deleteIconLink);
-      
-      productInfo.appendChild(iconsContainer);
-
-      section.appendChild(productInfo);
-    });
-  }
+  categorias.forEach(categoria => {
+    exibirProdutosPorCategoria(categoria);
+  });
 });
+
+function buscarProdutosPorCategoria(categoria) {
+  return fetch(`http://localhost:3000/produtos?categoria=${categoria}`)
+    .then(response => response.json())
+    .catch(error => {
+      console.error('Erro ao buscar os produtos:', error);
+      return [];
+    });
+}
+
+function exibirProdutosPorCategoria(categoria) {
+  buscarProdutosPorCategoria(categoria)
+    .then(produtos => {
+      console.log(`Produtos da categoria ${categoria}:`, produtos); // Adicione essa linha para depurar
+
+      const produtosSection = document.getElementById(`${categoria}Products`);
+      let html = '';
+
+      produtos.forEach(produto => {
+        const imagemUrl = `../assets/Imagens-salvas/${produto.image}`;
+        html += `
+          <div class="produto__info">
+            <img src="${imagemUrl}" alt="${produto.description}">
+            <p class="produto__descricao">${produto.produto}</p>
+            <p class="produto__preco">R$ ${produto.price.toFixed(2)}</p>
+            <p class="produto__codigo">#${produto.id}</p>
+            <div class="produto__icons">
+              <a href="#"><i class="fas fa-pencil-alt"></i></a>
+              <a href="#"><i class="fas fa-trash"></i></a>
+            </div>
+            <a href="../pages/produtos-similares.html?id=${produto.id}" class="produto__link">Ver produto</a>
+          </div>
+        `;
+      });
+
+      produtosSection.innerHTML = html;
+    });
+}
+
+
+// Função para buscar os produtos do arquivo JSON
+function buscarProdutos() {
+  return fetch('../data/produtos.json')
+    .then(response => response.json())
+    .catch(error => {
+      console.error('Erro ao buscar os produtos:', error);
+      return [];
+    });
+}
+
+// Função principal que busca os produtos e exibe no HTML
+function exibirProdutosAtualizados() {
+  buscarProdutos()
+    .then(produtos => {
+      exibirProdutos(produtos);
+    });
+}
+
+// Chamar a função para exibir os produtos atualizados
+exibirProdutosAtualizados();
+
+// Restante do código do arquivo listarprodutos.js...

@@ -1,36 +1,39 @@
 document.addEventListener('DOMContentLoaded', function() {
-  const adicionarBotao = document.querySelector('[data-adicionar-botao]');
-  adicionarBotao.addEventListener('click', adicionarProduto);
+  document.querySelector('[data-adicionar-botao]').addEventListener('click', function (event) {
+    event.preventDefault(); // Impede o envio do formulário
 
-  function adicionarProduto(event) {
-    event.preventDefault();
+    var produto = document.getElementById('produto').value;
+    var preco = document.getElementById('preco').value;
+    var categoria = document.getElementById('categoria').value;
+    var descricao = document.getElementById('descricao').value;
 
-    const imagem = document.getElementById('picture').src;
-    const nome = document.getElementById('produto').value;
-    const descricao = document.getElementById('descricao').value;
-    const preco = document.getElementById('preco').value;
-    const categoria = document.getElementById('categoria').value;
+    var fileInput = document.getElementById('imagem');
+    var file = null;
 
-    const novoProduto = {
-      "image": imagem,
-      "alt": nome,
-      "description": descricao,
-      "price": preco
-    };
+    if (fileInput.files.length > 0) {
+      file = fileInput.files[0];
+    }
+
+    var data = new FormData();
+    data.append('produto', produto);
+    data.append('preco', preco);
+    data.append('categoria', categoria);
+    data.append('descricao', descricao);
+    data.append('imagem', file);
 
     fetch('http://localhost:3000/adicionar-produto', {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(novoProduto)
+      body: data
     })
-      .then(response => response.json())
-      .then(data => {
-        alert('Produto adicionado com sucesso!');
-      })
-      .catch(error => {
-        console.error('Ocorreu um erro ao adicionar o produto:', error);
-      });
-  }
+    .then(function (response) {
+      if (response.ok) {
+        console.log('Produto adicionado com sucesso!');
+      } else {
+        console.log('Erro ao adicionar produto.');
+      }
+    })
+    .catch(function (error) {
+      console.error('Erro na solicitação:', error);
+    });
+  });
 });
