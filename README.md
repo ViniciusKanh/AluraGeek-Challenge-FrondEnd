@@ -2,14 +2,14 @@
 
 
 <div align ="center">
- <img  src="" />
+ <img  src="https://github.com/ViniciusKanh/AluraGeek-Challenge-FrondEnd/blob/main/assets/img/banner.jpg" />
 </div> 
 
 <h2 align ="center">Screenshot</h2>
 
 
 <div align ="center">
- <img src="" />
+ <img src="https://github.com/ViniciusKanh/AluraGeek-Challenge-FrondEnd/blob/main/assets/img/home.jpg" />
 </div>
  
  
