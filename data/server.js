@@ -7,6 +7,8 @@ var multer = require('multer');
 var path = require('path'); // Importe o módulo 'path'
 var fs = require("fs"); // Importe o módulo 'fs'
 
+const port = process.env.PORT || 3000;
+
 var storage = multer.diskStorage({
   destination: function (req, file, cb) {
     cb(null, '../assets/Imagens-salvas/');
@@ -230,6 +232,6 @@ app.get('/usuarios', function (req, res) {
   res.status(200).json(usuarios);
 });
 
-app.listen(3000, function () {
-  console.log('Servidor iniciado na porta 3000');
+app.listen(port, () => {
+  console.log(`Servidor rodando na porta ${port}`);
 });
