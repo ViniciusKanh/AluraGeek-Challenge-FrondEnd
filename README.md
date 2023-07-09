@@ -31,8 +31,9 @@ A empresa AluraGeek está precisando trazer mais clientes e aumentar suas vendas
 - É muito importante que o site seja responsivo, para dar aos clientes a facilidade de comprar através de dispositivos mobiles.
 
 **Observações:**
-- Na página de login usar email: teste@email.com e senha: 000000; Por enquanto isto é apenas como teste de estudo, para ser direcionado para a página de adicionar produto, não está sendo salvo nenhum dado em localStorage e nem em banco de dados. 
-- Estarei adicionando as novas funcionalidades ao projeto aos poucos. 
+- Na página de login usar email: cliente@cliente.com e senha: 1234; Por enquanto isto é apenas como teste de estudo, para ser direcionado para a página de adicionar produto, não está sendo salvo nenhum dado em localStorage e nem em banco de dados. 
+- para iniciar faça um node server.js para carregar toda as funcionalidades feita ate o presente.
+- A funcionalidade de buscar produto com nome nao foi implementada, só tem visualmente.
 
 #
 <div align="center">
