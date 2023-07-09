@@ -119,6 +119,7 @@ function exibirProdutosPorCategoria() {
 
       produtos.forEach(produto => {
         const imagemUrl = `../assets/Imagens-salvas/${produto.image}`;
+
         html += `
           <div class="produto__info">
             <img src="${imagemUrl}" alt="${produto.description}">

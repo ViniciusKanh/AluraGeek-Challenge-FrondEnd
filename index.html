@@ -100,35 +100,14 @@
   <script src="./js/contatoForm.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.8/dist/sweetalert2.all.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
-  <script src="./scripty.js"></script>
-  <script src="./controllers/lista-productos.js"></script>
   <script src="./js/listarprodutos.js"></script>
+  <script src="./js/produtosSimilares.js"></script>
   <script>
     const btnLogin = document.querySelector('[data-login-button]');
     btnLogin.addEventListener('click', () => {
       window.location.href = "./pages/login.html";
     });
   </script>
-<script>
-  // Função para buscar o nome do usuário no arquivo usuario.json
-  function buscarNomeUsuario() {
-    fetch('./data/usuario.json')
-      .then(response => response.json())
-      .then(usuarios => {
-        // Verifica se há usuários cadastrados
-        if (usuarios.length > 0) {
-          const nomeUsuario = usuarios[0].nome; // Supondo que você queira exibir o nome do primeiro usuário do arquivo
-          document.getElementById('nomeUsuario').textContent = `Bem-vindo, ${nomeUsuario}, ao AluraGeek`;
-        }
-      })
-      .catch(error => {
-        console.error('Erro ao buscar nome do usuário:', error);
-      });
-  }
-
-  // Chama a função ao carregar a página
-  window.addEventListener('load', buscarNomeUsuario);
-</script>
 
 </body>
 
