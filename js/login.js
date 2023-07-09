@@ -1,51 +1,29 @@
-function iniciarLogin() {
-  const botaologin = document.querySelector('[data-login-button]');
-  botaologin.addEventListener('click', () => {
-    window.location.href = "../pages/login.html";
-  });
+function verificar(event) {
+  event.preventDefault();
 
-  function verificar(event) {
-    event.preventDefault();
+  const email = document.querySelector('#email');
+  const senha = document.querySelector('#senha');
 
-    const email = document.querySelector('#email');
-    const senha = document.querySelector('#senha');
+  if (email.value === '' || senha.value === '') {
+    Swal.fire({
+      title: 'Campos vazios.',
+      text: 'Por favor, preencha todos os campos.',
+      icon: 'error',
+      confirmButtonText: 'Ok'
+    });
+    return false;
+  }
 
-    if (email.value === '') {
-      email.classList.add('input-erro');
-      email.focus();
-      Swal.fire({
-        title: 'O campo email é obrigatório.',
-        icon: 'error',
-        confirmButtonText: 'Ok'
-      });
-      return false;
-    } else if (email.value.indexOf('@') === -1 || email.value.indexOf('.') === -1 || (email.value.indexOf('.') - email.value.indexOf('@') === 1)) {
-      email.focus();
-      Swal.fire('Complete o email corretamente.');
-      return false;
-    } else {
-      email.classList.add('input-sucesso');
+  fetch('/data/usuario.json')
+  .then(response => {
+    if (response.ok) {
+      return response.json();
     }
-
-    if (senha.value === '') {
-      senha.focus();
-      senha.classList.add('input-erro');
-      Swal.fire({
-        title: 'Digite sua senha.',
-        icon: 'error',
-        confirmButtonText: 'Ok'
-      });
-      return false;
-    } else if (senha.value.length >= 7) {
-      Swal.fire('Digite no máximo 6 caracteres');
-      return false;
-    } else {
-      senha.classList.add('input-sucesso');
-    }
-
-    // Adicione aqui a lógica para verificar as credenciais de login
-    // Por exemplo:
-    if (email.value === 'teste@gmail.com' && senha.value === '123456') {
+    throw new Error('Erro na resposta do servidor.');
+  })
+  .then(usuarios => {
+    const usuarioEncontrado = usuarios.find(usuario => usuario.email === email.value && usuario.senha === senha.value);
+    if (usuarioEncontrado) {
       window.location.href = "../index.html";
     } else {
       Swal.fire({
@@ -55,10 +33,19 @@ function iniciarLogin() {
         confirmButtonText: 'Ok'
       });
     }
-  }
+  })
+  .catch(error => {
+    console.error('Erro ao realizar o login:', error);
+    Swal.fire({
+      title: 'Erro no servidor.',
+      text: 'Ocorreu um erro ao tentar fazer o login. Por favor, tente novamente mais tarde.',
+      icon: 'error',
+      confirmButtonText: 'Ok'
+    });
+  });
 
-  const btnEntrar = document.querySelector('[data-form-button]');
-  btnEntrar.addEventListener('click', verificar);
 }
 
-document.addEventListener('DOMContentLoaded', iniciarLogin);
+const btnEntrar = document.querySelector('[data-form-button]');
+btnEntrar.addEventListener('click', verificar);
+

@@ -35,7 +35,10 @@
       <p>Iniciar Sessão</p>
       <input type="email" name="Email" id="email" class="input-email" placeholder="Escreva seu email" required>
       <input type="password" name="Senha" id="senha" class="input-password" placeholder="Escreva sua senha" required>
+      <div class="botao-container">
       <button type="submit" data-form-button>Entrar</button>
+      <button onclick="redirectToCadastro()">Cadastre-se</button>
+    </div>
     </div>
   </section>
 
@@ -73,7 +76,13 @@
   </footer>
   <script src="../js/login.js"></script>
   <script src="../js/contatoForm.js"></script>
+  <script src="../data/server.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.8/dist/sweetalert2.all.min.js"></script>
+  <script>
+    function redirectToCadastro() {
+      window.location.href = "../pages/adionar-usuario.html";
+    }
+  </script>
   
 </body>
 

@@ -15,7 +15,12 @@
 
 .form-admin p {
   font-size: 2rem;
+  margin-bottom: 40px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
+
 
 .imagem-area {
   align-items: center;
@@ -89,6 +94,15 @@
 
 #imagem {
   display: none; /* Oculta o input de arquivo original */
+}
+
+.botao-container {
+  display: flex;
+  gap: 10px; /* Espaçamento entre os botões */
+}
+
+.botao-container button {
+  flex: 1; /* Os botões ocupam o espaço disponível igualmente */
 }
 /* Media Queries Devices
    ========================================================================== */

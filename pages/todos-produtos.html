@@ -30,6 +30,7 @@
         </a>
         <input type="text" class="busca__barra" placeholder="O que deseja encontrar?">
       </div>
+      <div class="botoes"><a href="adicionar-produto.html"><button>Adicionar produto</button></a></div>
       <div class="login">
         <button data-login-button>Login</button>
       </div>
@@ -40,7 +41,13 @@
     <section class="todos-produtos">
       <div class="produtos__titulo">
         <p>Todos os produtos</p>
-        <a href="adicionar-produto.html"><button>Adicionar produto</button></a>
+       
+        <select id="categoriaSelect" class="input-nome">
+          <option value="">Todos</option>
+          <option value="starwars">Star Wars</option>
+          <option value="consoles">Consoles</option>
+          <option value="diversos">Diversos</option>
+        </select>
       </div>
       <section id="productsSection" class="produtos">
         <!-- Os produtos serão inseridos aqui -->
@@ -80,8 +87,15 @@
     <span>&copy; 2022</span>
   </footer>
   <script src="../js/listarprodutos.js"></script>
+  <script src="../js/login.js"></script>
   <script src="../js/produtosSimilares.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+  <script>
+    const btnLogin = document.querySelector('[data-login-button]');
+    btnLogin.addEventListener('click', () => {
+      window.location.href = "./login.html";
+    });
+  </script>
 </body>
 
 </html>

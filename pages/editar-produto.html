@@ -36,14 +36,12 @@
       <p>Editar Produto</p>
       <div class="imagem-area">
         <div class="imagem">
-          <img src="" id="picture">
+          <img id="picture" data-src="" alt="Imagem do produto">
           <p>Arraste para adicionar uma imagem para o produto</p>
         </div>
         <p>ou</p>
         <label for="imagem" class="btn__imagem">Procure no seu computador</label>
         <input type="file" name="imagem" id="imagem" accept="image/*">
-
-
       </div>
       <input type="text" name="produto" id="produto" class="input-nome" placeholder="Nome do produto">
       <input type="text" name="preco" id="preco" class="input-nome" placeholder="Preço do produto">
@@ -54,7 +52,12 @@
         <option value="diversos">Diversos</option>
       </select>
       <textarea name="descricao" id="descricao" cols="30" rows="10" placeholder="Descrição do produto"></textarea>
-      <button data-adicionar-botao>Salvar Informaçoes do Produto</button>
+      <div class="botao-container">
+        <button data-editar-botao>Salvar Informações do Produto</button>
+        <button data-excluir-botao>Excluir Produtos</button>
+      </div>
+      
+      <div id="mensagem" style="display: none;"></div>
     </div>
   </section>
 
@@ -92,5 +95,11 @@
   </footer>
   <script src="../js/novoProdutoImage.js"></script>
   <script src="../js/editarProduto.js"></script>
-
+  <script src="../js/login.js"></script>
+  <script>
+    const btnLogin = document.querySelector('[data-login-button]');
+    btnLogin.addEventListener('click', () => {
+      window.location.href = "./login.html";
+    });
+  </script>
  

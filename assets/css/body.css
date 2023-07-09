@@ -125,6 +125,22 @@ button {
   border: 1px solid var(--texto-azul);
   color: var(--texto-azul);
   width: 182px;
+  gap: 100px; /* Espaçamento maior entre os elementos */
+}
+
+.nome-usuario {
+  font-weight: bold;
+  font-size: 16px;
+  color: #333;
+  align-items:start;
+  
+}
+
+
+.usuario-nome {
+  margin-right: 300px; /* Espaçamento à direita do nome do usuário */
+  font-weight: bold;
+  align-items:start;
 }
 
 /* Banner Area
@@ -171,7 +187,7 @@ button {
 .produtos__titulo {
   align-items: center;
   display: flex;
-  justify-content: space-between;
+  justify-content:space-between;
   padding: 0 6.5rem 1rem;
 }
 
@@ -250,6 +266,9 @@ button {
   height: 230px;
 }
 
+.botoes {
+  margin-right: 20px;
+}
 
 
 
@@ -495,18 +514,61 @@ footer p {
 
 @media only screen and (min-width: 601px) and (max-width: 900px) {
 
+   header {
+    padding: 2rem;
+  }
+
   .busca {
-    padding: 0 2rem;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    height: auto;
+    padding: 0;
+    margin-top: 2rem;
+  }
+
+  .busca__logo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+
+  .busca__logo img {
+    height: 29.17px;
+    margin-right: 0.313rem;
+    width: 40.02px;
+  }
+
+  .busca__logo p {
+    font-size: 1.125rem;
+    font-weight: bold;
+    margin-right: 0.5rem;
   }
 
   .busca__logo input {
-    background-position-x: 256px;
-    width: 292px;
+    margin-left: 0;
+    width: 100%;
+    max-width: 300px;
   }
 
-  .busca__logo input::placeholder {
-    font-size: 0.875rem;
+  .busca__texto {
+    font-weight: bold;
   }
+
+  .login {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+  }
+
+  .usuario-nome {
+    margin-right: 2rem;
+  }
+
+  .login button {
+    width: 119px;
+  }
+
 
   .banner__titulo {
     padding: 2rem;

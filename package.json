@@ -2,10 +2,10 @@
   "name": "live-coding-alurageek",
   "version": "1.0.0",
   "description": "<h1 align =\"center\">Challenge Front-end AluraGeek, Oracle ONE + Alura.</h1>",
-  "main": "index.js",
+  "main": "data/server.js",
   "scripts": {
     "server": "json-server --watch db.json",
-    "start": "node server.js"
+    "start": "node data/server.js"
   },
   "keywords": [],
   "author": "vinicius",
@@ -16,6 +16,7 @@
     "cors": "^2.8.5",
     "express": "^4.18.2",
     "multer": "^1.4.5-lts.1",
-    "mysql": "^2.18.1"
+    "mysql": "^2.18.1",
+    "pg": "^8.11.1"
   }
 }
