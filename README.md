@@ -37,7 +37,7 @@ A empresa AluraGeek está precisando trazer mais clientes e aumentar suas vendas
 
 #
 <div align="center">
-  <img src=""/>
+  <img src="https://github.com/ViniciusKanh/AluraGeek-Challenge-FrondEnd/blob/main/assets/images/readme-img/badge.png"/>
   <h2 align="center">Badge conquistada com esse projeto.</h2>
 </div
  
